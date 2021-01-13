@@ -36,7 +36,7 @@ bot.on('message', Message => {
     }
     
     if (Message.content.toLowerCase().includes('party')) {
-      Message.reply(':potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato:');
+      Message.reply(':potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato:');
       return;
     }
     
@@ -50,7 +50,7 @@ bot.on('message', Message => {
     return;
   }
   
-  if (Message.content.toLowerCase().includes('chips') || Message.content.includes('fries')) {
+  if (Message.content.toLowerCase().includes('chips') || Message.content.toLowerCase().includes('fries')) {
     Message.react('🍟');
     return;
   }
