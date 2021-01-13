@@ -1,0 +1,21 @@
+{
+  "name": "PotatoBot",
+  "version": "1.0.0",
+  "description": "Potato.",
+  "readme": "README.md",
+  "maintainers": [],
+  "author": "",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "bufferutil": "^3.0.0",
+    "discord.js": "^11.0.0",
+    "erlpack": "github:hammerandchisel/erlpack"
+  },
+  "engines": {
+    "node": "^6.4.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
