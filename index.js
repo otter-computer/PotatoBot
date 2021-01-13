@@ -30,12 +30,24 @@ bot.on('message', Message => {
 
   // Reply
   if (Message.mentions.users.has(bot.user.id)) {
-    if (Message.content.contains('chips') || Message.content.contains('fries')) {
+    if (Message.content.toLowerCase().includes('chips') || Message.content.toLowerCase().includes('fries')) {
       Message.reply(':fries:');
       return;
     }
     
     Message.reply(':potato:');
+    return;
+  }
+  
+  // React potato
+  if (Message.content.toLowerCase().includes('potato')) {
+    Message.react('🥔');
+    return;
+  }
+  
+  if (Message.content.toLowerCase().includes('chips') || Message.content.includes('fries')) {
+    Message.react('🍟');
+    return;
   }
 });
 
