@@ -30,6 +30,11 @@ bot.on('message', Message => {
 
   // Reply
   if (Message.mentions.users.has(bot.user.id)) {
+    if (Message.content.contains('chips') || Message.content.contains('fries')) {
+      Message.reply(':fries:');
+      return;
+    }
+    
     Message.reply(':potato:');
   }
 });
