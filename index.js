@@ -35,6 +35,11 @@ bot.on('message', Message => {
       return;
     }
     
+    if (Message.content.toLowerCase().includes('party')) {
+      Message.reply(':potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato::potato:');
+      return;
+    }
+    
     Message.reply(':potato:');
     return;
   }
