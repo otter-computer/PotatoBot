@@ -5,10 +5,18 @@
       body {
         background-color: #aed581;
         font-family: monospace;
+        margin: 3em;
       }
       
       .🥔 {
+        width: 1em;
+        height: 1em;
+        display: block;
         font-size: 10em;
+        animation-name: spin;
+        animation-duration: 40000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
       }
       
       h1 {
@@ -22,12 +30,17 @@
       a {
         
       }
+      
+      @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+      }
     </style>
   </head>
   <body>
-    <span class="🥔">🥔</span>
+    <div class="🥔">🥔</div>
     <h1>Potato Bot</h1>
-    <p>Hours of potato-based fun.</p>
-    <a href="https://discord.com/oauth2/authorize?client_id=511550439163035678&scope=bot&permissions=0">Invite Potato bot to your server.</a>
+    <p>Hours of potato-based fun for your Discord server.</p>
+    <a href="https://discord.com/oauth2/authorize?client_id=511550439163035678&scope=bot&permissions=0">Invite Potato bot into your home.</a>
   </body>
 </html>
