@@ -14,30 +14,20 @@ process.on('SIGINT', cleanup);
 process.on('SIGTERM', cleanup);
 
 // Message Handler
-function handleMessage(message) {
-  console.log('Handling message:', message.id);
+function handleMessage(Message) {
 
   // Ignore Discord system message
-  if (message.system) {
-    console.log('Message ignored: Discord system message.');
-    return;
-  }
+  if (Message.system) return;
 
   // No Bots
-  if (message.author.bot) {
-    console.log('Message ignored: Bot message.');
-    return;
-  }
+  if (Message.author.bot) return;
 
   // Ignore DMs
-  if (!message.guild) {
-    console.log('Message ignored: DM.');
-    return;
-  }
+  if (!Message.guild) return;
 
   // Reply
-  if (message.mentions.users.has(bot.user.id)) {
-    message.reply(':potato:');
+  if (Message.mentions.users.has(bot.user.id)) {
+    Message.reply(':potato:');
   }
 }
 
@@ -46,9 +36,9 @@ bot.on('ready', () => {
   console.log('Bot connected.');
 });
 
-bot.on('message', message => {
+bot.on('message', Message => {
   try {
-    handleMessage(message);
+    handleMessage(Message);
   } catch (e) {
     console.error(e.stack);
   }
