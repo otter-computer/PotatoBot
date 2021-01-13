@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "Potato.",
   "readme": "README.md",
-  "maintainers": [],
   "author": "Thomas <thomas@otter.pizza>",
   "license": "GPL-2.0",
   "dependencies": {
     "discord.js": "^12.5.0"
   },
   "engines": {
-    "node": "^6.4.0"
+    "node": "14.x"
   },
   "main": "index.js",
   "scripts": {
